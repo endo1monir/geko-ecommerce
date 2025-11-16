@@ -10,9 +10,10 @@ Route::get('/', function () {
         'canRegister' => Features::enabled(Features::registration()),
     ]);
 })->name('home');
-Route::get('/admin',[UserController::class,'index']);
+Route::get('/admin', [UserController::class, 'index']);
 Route::get('dashboard', function () {
     return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified','admin'])->name('dashboard');
 
-require __DIR__.'/settings.php';
+
+require __DIR__ . '/settings.php';
