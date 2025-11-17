@@ -18,7 +18,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
         //for admin.php routes
         then: function () {
-            Route::middleware(['web', 'auth', 'role:admin','admin'])
+            Route::middleware(['web', 'auth', 'role:admin','admin', 'set-locale'])
                 ->prefix('admin')
                 ->as('admin.')
                 ->group(base_path('routes/admin.php'));
@@ -30,7 +30,8 @@ return Application::configure(basePath: dirname(__DIR__))
             'role' => \Spatie\Permission\Middleware\RoleMiddleware::class,
             'permission' => \Spatie\Permission\Middleware\PermissionMiddleware::class,
             'role_or_permission' => \Spatie\Permission\Middleware\RoleOrPermissionMiddleware::class,
-            'admin' => \App\Http\Middleware\AdminMiddleware::class
+            'admin' => \App\Http\Middleware\AdminMiddleware::class,
+            'set-locale' => \App\Http\Middleware\SetLocale::class
         ]);
         $middleware->web(append: [
             HandleAppearance::class,

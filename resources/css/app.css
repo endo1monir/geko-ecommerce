@@ -6,6 +6,47 @@
 @source '../../storage/framework/views/*.php';
 
 @custom-variant dark (&:is(.dark *));
+[dir="rtl"] {
+    direction: rtl;
+}
+
+[dir="ltr"] {
+    direction: ltr;
+}
+
+/* 🆕 ADD THESE RTL VARIANTS */
+@variant rtl (&:is([dir="rtl"] *));
+@variant ltr (&:is([dir="ltr"] *));
+
+/* 🆕 ADD THESE RTL-AWARE UTILITIES */
+@layer utilities {
+    /* Text alignment */
+    .text-start {
+        text-align: start;
+    }
+    
+    .text-end {
+        text-align: end;
+    }
+    
+    /* Float utilities */
+    .float-start {
+        float: inline-start;
+    }
+    
+    .float-end {
+        float: inline-end;
+    }
+    
+    /* Clear utilities */
+    .clear-start {
+        clear: inline-start;
+    }
+    
+    .clear-end {
+        clear: inline-end;
+    }
+}
 
 @theme inline {
     --font-sans:
