@@ -21,5 +21,13 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+        config([
+            'seotools.meta.defaults.title' => trans('seo.defaults.title'),
+            'seotools.meta.defaults.description' => trans('seo.defaults.description'),
+            'seotools.opengraph.defaults.title' => trans('seo.og.title'),
+            'seotools.opengraph.defaults.description' => trans('seo.og.description'),
+            'seotools.json-ld.defaults.title' => trans('seo.json-ld.title'),
+            'seotools.json-ld.defaults.description' => trans('seo.json-ld.description'),
+        ]);
     }
 }
