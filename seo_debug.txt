@@ -1,0 +1,20 @@
+
+Warning: PHP Startup: Unable to load dynamic library 'pdo_firebird' (tried: ext\pdo_firebird (The specified module could not be found), ext\php_pdo_firebird.dll (The specified module could not be found)) in Unknown on line 0
+
+   Error 
+
+  Call to undefined method Artesaos\SEOTools\JsonLd::getTitle()
+
+  at vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:363
+    359▕         if (! $instance) {
+    360▕             throw new RuntimeException('A facade root has not been set.');
+    361▕         }
+    362▕ 
+  ➜ 363▕         return $instance->$method(...$args);
+    364▕     }
+    365▕ }
+    366▕
+
+  1   test_seo_script.php:28
+      Illuminate\Support\Facades\Facade::__callStatic("getTitle", [])
+

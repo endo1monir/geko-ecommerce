@@ -1,0 +1,17 @@
+
+Warning: PHP Startup: Unable to load dynamic library 'pdo_firebird' (tried: ext\pdo_firebird (The specified module could not be found), ext\php_pdo_firebird.dll (The specified module could not be found)) in Unknown on line 0
+SEOTools Generate: <title>Meta Title Test - It's Over 9000!</title>
+<meta name="description" content="Meta Description Test">
+<meta name="keywords" content="test,  seo,  laravel">
+<link rel="canonical" href="https://example.com/test-product">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="OG Title Test">
+<meta property="og:description" content="OG Description Test">
+<meta property="og:site_name" content="Laravel">
+<meta property="og:url" content="https://example.com/test-product">
+<meta property="og:image" content="https://example.com/image.jpg">
+
+<meta name="twitter:title" content="OG Title Test">
+<meta name="twitter:description" content="OG Description Test">
+<meta name="twitter:image" content="https://example.com/image.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Meta Title Test","description":"Meta Description Test","url":"https://example.com/test-product","image":"https://example.com/image.jpg","key":"value"}</script>

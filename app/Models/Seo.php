@@ -40,4 +40,14 @@ class Seo extends Model
     {
         return $this->morphTo();
     }
+    //check if should be indexed
+    public function shouldIndex(): bool
+    {
+        return str_contains($this->robots, 'index');
+    }
+    //Check if should be followed
+    public function shouldFollow(): bool
+    {
+        return str_contains($this->robots, 'follow');
+    }
 }
